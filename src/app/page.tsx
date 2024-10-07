@@ -79,6 +79,7 @@ export default function Home() {
       <div className="flex flex-col gap-10">
         <div className="text-4xl">
           {/* 🔔{window && "Notification" in window && Notification?.permission}🔔 */}
+          {typeof window !== "undefined" && navigator?.userAgent}
         </div>
         <div className="break-all">{token}</div>
         <button className="border rounded py-2" onClick={requestPermission}>
